@@ -1,0 +1,32 @@
+
+
+<div>
+    <h1>Welcome</h1>
+    <div class="card">
+            <h4 class="card-title">
+                    <a routerLink="/movie"> In Theaters Now</a>
+                    </h4>
+                    
+        <div *ngFor='let movie of movies, let i=index'>
+            <div *ngIf="i<1" >
+             <a routerLink="/movie"><img src='{{movie.img}}' alt="Movie"/></a>
+            </div>
+        </div>
+        <a class="hint" routerLink="/tv">See movies currently in theaters</a>
+    </div>
+
+    <div class="card">
+            <h4 class="card-title" >
+                    <a routerLink="/tv">Popular Tv Shows</a>
+                </h4>
+                
+
+        <div *ngFor='let shows of tv, let i=index'>
+         <div *ngIf="i<1"  >
+              <a routerLink="/tv"><img src="{{shows.img}}" alt="tv"/></a>
+         </div>
+        </div>
+        <a class="hint" routerLink="/tv">See all popular tv shows</a>
+    </div>
+
+</div>
